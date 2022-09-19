@@ -1,0 +1,37 @@
+{
+  "name": "gc-commit-aa-tool",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": {
+    "name": "gz65555",
+    "email": "gz65555@gmail.com"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc"
+  },
+  "bin": {
+    "gc": "./bin/cli"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "types": "types",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^7.3.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "cac": "^6.7.14",
+    "chalk": "^4.1.2",
+    "execa": "^5.1.1",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.4",
+    "ora": "^5.4.1"
+  }
+}
