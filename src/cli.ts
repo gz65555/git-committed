@@ -137,6 +137,7 @@ setTimeout(async () => {
     scope.length <= 0 ? `${type}: ${message}` : `${type}(${scope}): ${message}`;
   const spinner = ora("Git committing... ").start();
   try {
+    console.log("\n");
     await gitHandler.commit(commitMessage);
   } catch (e) {
     process.exit(1);
@@ -153,6 +154,7 @@ setTimeout(async () => {
     const spinner = ora("Git pushing... ").start();
     const currentBranch = await gitHandler.getBranchName();
     try {
+      console.log("\n");
       await gitHandler.pushToRemote(currentBranch, remote);
     } catch(e) {
       process.exit(1);
