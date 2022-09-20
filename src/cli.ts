@@ -137,7 +137,7 @@ setTimeout(async () => {
     scope.length <= 0 ? `${type}: ${message}` : `${type}(${scope}): ${message}`;
   const spinner = ora("Git committing... ").start();
   try {
-    gitHandler.commit(commitMessage);
+    await gitHandler.commit(commitMessage);
   } catch (e) {
     process.exit(1);
   } finally {
